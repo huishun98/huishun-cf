@@ -1,0 +1,6 @@
+Notes: I just have to upload theme
+
+Series:
+1. Getting started
+2. Building things
+3. HS coding logs
