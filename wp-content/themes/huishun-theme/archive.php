@@ -75,23 +75,7 @@ Template Name: Archive
 						</div>
 					</div> 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 					<?
-			
 			} else if ($queried_object->name == 'Getting Started') {
 					?>
 

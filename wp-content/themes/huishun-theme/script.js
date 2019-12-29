@@ -1,24 +1,21 @@
 jQuery(document).ready(function ($) {
 
     //dropdown
-    var archiveDropdownActive = () => {
-        console.log(document.getElementsByClassName("archive-dropdown"));
+    const archiveDropdownActive = () => {
         document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "10";
         $('.archive-dropdown').addClass('active');
-        console.log(archiveObj);
     };
-    var archiveDropdownInactive = () => {
+    const archiveDropdownInactive = () => {
         $('.archive-dropdown').removeClass('active');
         document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "-1";
     }
 
-    var archiveObj;
+    const archiveObj;
 
     $('.fixed-header .header-label').each((index, obj) => {
         // following line is problematic
         if ($(obj).html() == 'All posts') {
             archiveObj = $(obj).parent();
-            console.log(archiveObj);
         }
     });
 
