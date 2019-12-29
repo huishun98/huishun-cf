@@ -1,36 +1,38 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function ($) {
 
-    //dropdown
-    var archiveDropdownActive = () => {
-        console.log(document.getElementsByClassName("archive-dropdown"));
-        document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "10";
-        $('.archive-dropdown').addClass('active');
-        console.log(archiveObj);
-    };
-    var archiveDropdownInactive = () => {
-        $('.archive-dropdown').removeClass('active');
-        document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "-1";
-    }
+    // //dropdown
+    // var archiveDropdownActive = () => {
+    //     console.log(document.getElementsByClassName("archive-dropdown"));
+    //     document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "10";
+    //     $('.archive-dropdown').addClass('active');
+    //     console.log(archiveObj);
+    // };
+    // var archiveDropdownInactive = () => {
+    //     $('.archive-dropdown').removeClass('active');
+    //     document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "-1";
+    // }
 
-    var archiveObj;
-    $('.fixed-header .header-label').each((index, obj) => {
-        // following line is problematic
-        if ($(obj).html() == 'All posts') {
-            archiveObj = $(obj).parent();
-            console.log(archiveObj);
-        }
-    });
-    
-    archiveObj.hover(() => {
-        archiveDropdownActive();
-    }, () => {
-        archiveDropdownInactive();
-    })    
-    $('.archive-dropdown').hover(() => {
-        archiveDropdownActive();
-    }, () => {
-        archiveDropdownInactive();
-    })  
+    // var archiveObj;
+
+    // $('.fixed-header .header-label').each((index, obj) => {
+    //     // following line is problematic
+    //     if ($(obj).html() == 'All posts') {
+    //         archiveObj = $(obj).parent();
+    //         console.log(archiveObj);
+    //     }
+    // });
+
+    // archiveObj.hover(() => {
+    //     archiveDropdownActive();
+    // }, () => {
+    //     archiveDropdownInactive();
+    // })
+
+    // $('.archive-dropdown').hover(() => {
+    //     archiveDropdownActive();
+    // }, () => {
+    //     archiveDropdownInactive();
+    // })
 
     //recent posts
     var recentPosts = () => {
@@ -57,13 +59,13 @@ jQuery(document).ready(function($){
     $(window).resize(() => {
         resizeYoutube();
     })
-    
+
     //View more function
     numOfPosts = 0;
     heightOfNewestPostsOuter = 0;
     showValue = 3;
     $('.timeline-item').each((index, obj) => {
-        numOfPosts ++;
+        numOfPosts++;
         if (index < showValue) {
             heightOfNewestPostsOuter += $(obj).height();
         }
@@ -93,12 +95,12 @@ jQuery(document).ready(function($){
             setTimeout(disappear, 500);
         }
     })
-    
-    
-    
+
+
+
     //hamburger function
     $('.mobile-navi-trigger').click(() => {
-        
+
         if ($('.hamburger').hasClass('active')) {
             $('.hamburger-line').removeClass('active');
             $('.hamburger').removeClass('active');
@@ -111,21 +113,21 @@ jQuery(document).ready(function($){
             $('html').css('overflow', 'hidden');
         }
     })
-    
-    
+
+
     //mailchimp   
     ajaxMailChimpForm($("#subscribe-form"), $("#subscribe-result"));
-    
+
     // If resultElement is given, the subscribe result is set as html to that element.
-    function ajaxMailChimpForm($form, $resultElement){
+    function ajaxMailChimpForm($form, $resultElement) {
         // Hijack the submission. We'll submit the form manually.
-        $form.submit(function(e) {
+        $form.submit(function (e) {
             e.preventDefault();
 
             console.log('Checking if email is valid...')
-            
+
             if (!isValidEmail($form)) {
-                var error =  "Please enter a valid email address.";
+                var error = "Please enter a valid email address.";
                 $resultElement.html(error);
                 $resultElement.css("color", "red");
             } else {
@@ -135,7 +137,7 @@ jQuery(document).ready(function($){
             }
         });
     }
-    
+
     // Validate the email address in the form
     function isValidEmail($form) {
         // If email is empty, show error message.
@@ -148,7 +150,7 @@ jQuery(document).ready(function($){
         }
         return true;
     }
-    
+
     // Submit the form with an ajax/jsonp request.
     //https://stackoverflow.com/questions/8425701/ajax-mailchimp-signup-form-integration
     function submitSubscribeForm($form, $resultElement) {
@@ -161,25 +163,25 @@ jQuery(document).ready(function($){
             dataType: "jsonp",
             jsonp: "c", // trigger MailChimp to return a JSONP response
             contentType: "application/json; charset=utf-8",
-            
-            error: function(error){
+
+            error: function (error) {
                 // According to jquery docs, this is never called for cross-domain JSONP requests
             },
-            
-            success: function(data){
+
+            success: function (data) {
                 if (data.result != "success") {
                     var message = data.msg || "Unable to subscribe. Please try again later.";
                     $resultElement.css("color", "red");
                     if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
                         message = "You're already subscribed. Thank you!";
                         $resultElement.css("color", "white");
-                        $('#subscribe-form').css('display','none');
+                        $('#subscribe-form').css('display', 'none');
                     }
                     $resultElement.html(message);
                 } else {
                     $resultElement.css("color", "white");
                     $resultElement.html("You have subscribed successfully. Thank you for subscribing!");
-                    $('#subscribe-form').css('display','none');
+                    $('#subscribe-form').css('display', 'none');
                 }
             }
         });
