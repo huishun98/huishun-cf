@@ -1,47 +1,49 @@
 jQuery(document).ready(function ($) {
 
-    // //dropdown
-    // var archiveDropdownActive = () => {
-    //     console.log(document.getElementsByClassName("archive-dropdown"));
-    //     document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "10";
-    //     $('.archive-dropdown').addClass('active');
-    //     console.log(archiveObj);
-    // };
-    // var archiveDropdownInactive = () => {
-    //     $('.archive-dropdown').removeClass('active');
-    //     document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "-1";
-    // }
+    //dropdown
+    var archiveDropdownActive = () => {
+        console.log(document.getElementsByClassName("archive-dropdown"));
+        document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "10";
+        $('.archive-dropdown').addClass('active');
+        console.log(archiveObj);
+    };
+    var archiveDropdownInactive = () => {
+        $('.archive-dropdown').removeClass('active');
+        document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "-1";
+    }
 
-    // var archiveObj;
+    var archiveObj;
 
-    // $('.fixed-header .header-label').each((index, obj) => {
-    //     // following line is problematic
-    //     if ($(obj).html() == 'All posts') {
-    //         archiveObj = $(obj).parent();
-    //         console.log(archiveObj);
-    //     }
-    // });
+    $('.fixed-header .header-label').each((index, obj) => {
+        // following line is problematic
+        if ($(obj).html() == 'All posts') {
+            archiveObj = $(obj).parent();
+            console.log(archiveObj);
+        }
+    });
 
-    // archiveObj.hover(() => {
-    //     archiveDropdownActive();
-    // }, () => {
-    //     archiveDropdownInactive();
-    // })
+    if (archiveObj) {
+        archiveObj.hover(() => {
+            archiveDropdownActive();
+        }, () => {
+            archiveDropdownInactive();
+        })
+    }
 
-    // $('.archive-dropdown').hover(() => {
-    //     archiveDropdownActive();
-    // }, () => {
-    //     archiveDropdownInactive();
-    // })
+    $('.archive-dropdown').hover(() => {
+        archiveDropdownActive();
+    }, () => {
+        archiveDropdownInactive();
+    })
 
     //recent posts
-    var recentPosts = () => {
-        var topToTimeline = $('.timeline-section').offset().top - 20;
-        $("html").animate({ scrollTop: topToTimeline }, 600);
-    }
-    $('.scroll-down').click(() => {
-        recentPosts();
-    })
+    // var recentPosts = () => {
+    //     var topToTimeline = $('.timeline-section').offset().top - 20;
+    //     $("html").animate({ scrollTop: topToTimeline }, 600);
+    // }
+    // $('.scroll-down').click(() => {
+    //     recentPosts();
+    // })
 
     //set youtube vids height 
     var resizeYoutube = () => {

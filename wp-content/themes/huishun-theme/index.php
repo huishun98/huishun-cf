@@ -6,7 +6,7 @@
                 <span class="logo-description">Code Factory</span>
             </div>
             <span class="banner-description"><?php bloginfo('description') ?></span>
-            <div class="scroll-down-container-outer">
+            <!-- <div class="scroll-down-container-outer">
                 <div class="scroll-down-container">
                     <a class="link scroll-down" href="javascript:void(0)">View Posts 
                         <svg
@@ -17,7 +17,29 @@
                         </svg>
                     </a>
                 </div>
-            </div>    
+            </div>     -->
+        </div>
+    </div>
+
+    <div class="timeline-section">
+        <div class="section-container">
+                <h2 class="section-header">NEWEST POSTS</h2>
+                <div class="newest-posts-inner">
+                    <?php
+                    $default_posts_per_page = get_option( 'posts_per_page' );
+                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                    $args = array( 'post_type' => 'post', 'posts_per_page' =>  3, 'paged' => $paged );
+                    $wp_query = new WP_Query($args);
+                    while(have_posts()) {
+                        the_post();
+                        get_template_part('content', 'archive');
+                    } ?>
+                </div>
+                <!-- then the pagination links -->
+                <div class="pagination">
+                    <span class="pagination-item"><?php next_posts_link( '&larr; Older posts', $wp_query->max_num_pages); ?></span>
+					<span class="pagination-item"><?php previous_posts_link( 'Newer posts &rarr;' ); ?></span>
+                </div>
         </div>
     </div>
 
@@ -66,28 +88,6 @@
             </a>
         </div>
     </div>
-    </div>
-
-    <div class="timeline-section">
-        <div class="section-container">
-                <h2 class="section-header">NEWEST POSTS</h2>
-                <div class="newest-posts-inner">
-                    <?php
-                    $default_posts_per_page = get_option( 'posts_per_page' );
-                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                    $args = array( 'post_type' => 'post', 'posts_per_page' =>  3, 'paged' => $paged );
-                    $wp_query = new WP_Query($args);
-                    while(have_posts()) {
-                        the_post();
-                        get_template_part('content', 'archive');
-                    } ?>
-                </div>
-                <!-- then the pagination links -->
-                <div class="pagination">
-                    <span class="pagination-item"><?php next_posts_link( '&larr; Older posts', $wp_query->max_num_pages); ?></span>
-					<span class="pagination-item"><?php previous_posts_link( 'Newer posts &rarr;' ); ?></span>
-                </div>
-        </div>
     </div>
 
     <div class="subscribe">
