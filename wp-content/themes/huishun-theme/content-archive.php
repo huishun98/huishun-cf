@@ -21,7 +21,7 @@
 							<?php the_excerpt();?>
 						</a>
 
-						<div class="read-more d-none d-lg-block">
+						<div class="read-more d-block">
 							<a href="<?php echo the_permalink() ?>">Read more</a>
 						</div>
 

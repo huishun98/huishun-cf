@@ -472,7 +472,7 @@ a {
     text-align: center;
     letter-spacing: 1px;
     font-size: 14px;
-    color: 
+    color: #494949
 }
 .newest-posts-outer {
     height: 300px;
@@ -494,9 +494,7 @@ a {
         margin: auto;
     }
     .banner-description {
-        padding-top: 20px;
-        font-size: 1.2rem;
-        
+        padding-top: 20px;        
     }
 }
 

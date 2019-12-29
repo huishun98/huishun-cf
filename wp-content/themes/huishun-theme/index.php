@@ -8,7 +8,7 @@
             <span class="banner-description"><?php bloginfo('description') ?></span>
             <div class="scroll-down-container-outer">
                 <div class="scroll-down-container">
-                    <a class="link scroll-down" href="javascript:void(0)">Recent Posts 
+                    <a class="link scroll-down" href="javascript:void(0)">View Posts 
                         <svg
                         xmlns="http://www.w3.org/2000/svg" 
                         width="24" height="24" 
@@ -75,7 +75,7 @@
                     <?php
                     $default_posts_per_page = get_option( 'posts_per_page' );
                     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                    $args = array( 'post_type' => 'post', 'posts_per_page' =>  $default_posts_per_page, 'paged' => $paged );
+                    $args = array( 'post_type' => 'post', 'posts_per_page' =>  3, 'paged' => $paged );
                     $wp_query = new WP_Query($args);
                     while(have_posts()) {
                         the_post();
