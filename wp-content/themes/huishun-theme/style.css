@@ -209,6 +209,11 @@ a {
 }
 
 .scroll-down-container-outer {
+    width: 100%;
+    text-align: center;
+}
+
+/* .scroll-down-container-outer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -228,7 +233,7 @@ a {
 
 .scroll-down {
     margin: auto;
-}
+} */
 
 @media only screen and (max-width: 992px) {
     .fixed-header {
