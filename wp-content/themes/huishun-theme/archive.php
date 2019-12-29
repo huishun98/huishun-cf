@@ -46,6 +46,11 @@ Template Name: Archive
 								<a href="javascript:void(0);" id="toggle-order" class="toggle-order">Oldest to Newest</a>
 							</div>
 							<?php 
+
+							wp_localize_script('archive_script', 'archive_results_array', $archive_results_array);
+							$reverse = [0];
+							wp_localize_script('archive_script', 'reverse', $reverse);
+
 							$args = array( 'post_type' => 'post');
 							$wp_query = new WP_Query($args);
 
@@ -54,10 +59,6 @@ Template Name: Archive
 								the_post();
 								array_push($archive_results_array, load_template_part('content', 'archive'));
 							}
-
-							wp_localize_script('archive_script', 'archive_results_array', $archive_results_array);
-							$reverse = [0];
-							wp_localize_script('archive_script', 'reverse', $reverse);
 							?>
 
 							<div class="archive-results">

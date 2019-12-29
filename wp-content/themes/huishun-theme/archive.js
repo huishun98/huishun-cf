@@ -5,7 +5,8 @@ $(document).ready(() => {
             newestFirst = false;
         }
         $('#toggle-order').click(() => {
-            
+            console.log('please toggle')
+
             //button words
             switch (newestFirst) {
                 case true:
