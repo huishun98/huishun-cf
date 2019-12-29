@@ -113,20 +113,11 @@ Template Name: Archive
 							the_post();
 							array_push($archive_results_array, load_template_part('content', 'archive'));
 						}
-						?>
 
-						<?php
-						// Enqueue this js file, so that WordPress knows that we will be using this js file in this page
-						// wp_enqueue_script('audio-demo-player', get_template_directory_uri() . '/script.js');
-						// now we need to set the array name to be audio_array, so that later in the js file we can call them with that name
-						// we also pass in the array that we have in the require_once
 						$archive_results_array = array_reverse($archive_results_array);
 						wp_localize_script('archive_script', 'archive_results_array', $archive_results_array);
 						$reverse = [1];
 						wp_localize_script('archive_script', 'reverse', $reverse);
-						// this trigger the &lt;head&gt;&lt;/head&gt; section, which will enqueue the js file. Without this, the js file will not be
-						// included in this specific page
-						// wp_head();
 						?>
 
 						<div class="archive-results">
@@ -184,20 +175,9 @@ Template Name: Archive
 							the_post();
 							array_push($archive_results_array, load_template_part('content', 'archive'));
 						}
-						?>
-
-						<?php
-						// Enqueue this js file, so that WordPress knows that we will be using this js file in this page
-						// wp_enqueue_script('audio-demo-player', get_template_directory_uri() . '/script.js');
-						// now we need to set the array name to be audio_array, so that later in the js file we can call them with that name
-						// we also pass in the array that we have in the require_once
 						wp_localize_script('archive_script', 'archive_results_array', $archive_results_array);
 						$reverse = [0];
 						wp_localize_script('archive_script', 'reverse', $reverse);
-
-						// this trigger the &lt;head&gt;&lt;/head&gt; section, which will enqueue the js file. Without this, the js file will not be
-						// included in this specific page
-						// wp_head();
 						?>
 
 						<div class="archive-results">
@@ -207,6 +187,7 @@ Template Name: Archive
 							}
 							?>
 						</div>
+						
 						<!-- then the pagination links -->
 						<div class="pagination">
 							<span class="pagination-item"><?php next_posts_link('&larr; Older posts', $wp_query->max_num_pages); ?></span>
