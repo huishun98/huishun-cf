@@ -560,14 +560,6 @@ a {
     display: none;
 }
 
-@media only screen and (max-width: 992px) {
-    .banner-wrapper {
-        max-width: 80%;
-        display: block;
-        margin: auto;
-    }
-}
-
 /* single page --- article page*/
 
 .single-container {
