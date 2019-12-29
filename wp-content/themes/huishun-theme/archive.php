@@ -5,9 +5,9 @@ Template Name: Archive
 <?php get_header() ?>
 <div class="timeline-section">
 	<div class="section-container">
-		<? if (have_posts()) {
-			the_archive_title('<h2 class="section-header">', '</h2>');
-		} ?>
+		<? if (have_posts()) { ?>
+			<h2 class="section-header">All Posts</h2>
+		<? } ?>
 		<div class="newest-posts-inner">
 			<?php
 
@@ -43,9 +43,6 @@ Template Name: Archive
 					</ul>
 
 					<div class="col-lg-10">
-						<div class="toggle-order-container">
-							<a href="javascript:void(0);" id="toggle-order" class="toggle-order">Oldest to Newest</a>
-						</div>
 						<?php
 
 						$args = array('post_type' => 'post');
@@ -65,20 +62,6 @@ Template Name: Archive
 							}
 							?>
 						</div>
-
-						<?php
-						// Enqueue this js file, so that WordPress knows that we will be using this js file in this page
-						// wp_enqueue_script('audio-demo-player', get_template_directory_uri() . '/script.js');
-						// now we need to set the array name to be audio_array, so that later in the js file we can call them with that name
-						// we also pass in the array that we have in the require_once
-						$archive_results_array = array_reverse($archive_results_array);
-						wp_localize_script('archive_script', 'archive_results_array', $archive_results_array);
-						$reverse = [1];
-						wp_localize_script('archive_script', 'reverse', $reverse);
-						// this trigger the &lt;head&gt;&lt;/head&gt; section, which will enqueue the js file. Without this, the js file will not be
-						// included in this specific page
-						// wp_head();
-						?>
 						
 						<!-- then the pagination links -->
 						<div class="pagination">
