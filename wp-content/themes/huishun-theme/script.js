@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
         document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "-1";
     }
 
-    const archiveObj;
+    let archiveObj;
 
     $('.fixed-header .header-label').each((index, obj) => {
         // following line is problematic

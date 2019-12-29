@@ -10,7 +10,7 @@ Version: 1.0
     --main-color-one: #DEA6AF;
     --main-color-two: #dea65f;
     --main-color-three: #8bc1ff;
-    --text-color-one: var(--text-color-one);
+    --text-color-one: #494949;
 }
 
 html, body {
@@ -187,7 +187,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--main-color-two)
+    color: var(--text-color-one)
 }
 
 .hs {
