@@ -5,14 +5,13 @@ Template Name: Archive
 <?php get_header() ?>
 <div class="timeline-section">
 	<div class="section-container">
-		<? if (have_posts()) { ?>
-			<h2 class="section-header">All Posts</h2>
-		<? } ?>
+		<? if (have_posts()) {
+			the_archive_title('<h2 class="section-header">', '</h2>');
+		} ?>
 		<div class="newest-posts-inner">
 			<?php
 
 			$queried_object = get_queried_object();
-			// following line is problematic
 			if ($queried_object->post_title === 'All posts') { ?>
 				<div class="row">
 					<ul class="d-none d-lg-block col-lg-2 archive-sidebar">
@@ -43,7 +42,7 @@ Template Name: Archive
 					</ul>
 
 					<div class="col-lg-10">
-						
+
 						<?php
 						$args = array('post_type' => 'post');
 						$wp_query = new WP_Query($args);
@@ -62,7 +61,7 @@ Template Name: Archive
 							}
 							?>
 						</div>
-						
+
 						<!-- then the pagination links -->
 						<div class="pagination">
 							<span class="pagination-item"><?php next_posts_link('&larr; Older posts', $wp_query->max_num_pages); ?></span>
@@ -187,7 +186,7 @@ Template Name: Archive
 							}
 							?>
 						</div>
-						
+
 						<!-- then the pagination links -->
 						<div class="pagination">
 							<span class="pagination-item"><?php next_posts_link('&larr; Older posts', $wp_query->max_num_pages); ?></span>
