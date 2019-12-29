@@ -146,7 +146,7 @@ a {
 .header-label {
     text-transform: uppercase;
     font-size: 12px;
-    letter-spacing: 3.6px;
+    letter-spacing: 2px;
     color: #494949;
 }
 .logo {
@@ -166,7 +166,7 @@ a {
 .logo-description {
     text-transform: uppercase;
     font-size: 10px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-indent: 3px;
 }
 .header-label:hover, a.logo:hover {
@@ -225,13 +225,13 @@ a {
 
 /* sections */
 .section-container {
-    padding: 90px 0 110px 0;
+    padding: 100px 0 110px 0;
 }
 .section-header {
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    letter-spacing: 5.4px;
+    letter-spacing: 3px;
     color: #494949;
     text-align: center;
     padding-bottom: 60px;
@@ -283,9 +283,9 @@ a {
     max-width: 90%;
 }
 .timeline-content-title {
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     padding-bottom: 10px;
     display: block;
     color: #494949;
@@ -293,9 +293,7 @@ a {
 }
 .timeline-content-description {
     font-family: Mukta;
-    font-size: 17px;
     line-height: 1.5;
-    letter-spacing: 0.6px;
     padding-right: 20px;
     opacity: 0.7;
     font-weight: 300;   
@@ -521,11 +519,12 @@ a {
     font-size: 64px;
     font-weight: bold;
     color: black;
+    letter-spacing: 1px;
 }
 .single-description {
     font-family: Montserrat;
     font-size: 14px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: rgba(73, 73, 73, 0.7);
     padding: 10px 0 45px 0;
 }
@@ -905,15 +904,6 @@ a {
 .commentform-button {
     margin-right: 0;
 }
-.subheader-one {
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: #494949;
-    display: block;
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
 /* .comment-item {
     padding-bottom: 20px;
     font-size: 20px;
@@ -946,9 +936,6 @@ a {
     .comment-date {
         font-size: 13px;
     } */
-    .subheader-one {
-        font-size: 18px;
-    }
 }
 
 /* syling default comments section */
@@ -1080,7 +1067,7 @@ ul.archive-sidebar {
 }
 .archive-sidebar-title {
     font-weight: 900;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-family: Montserrat;
     padding-bottom: 5px;
     display: block;

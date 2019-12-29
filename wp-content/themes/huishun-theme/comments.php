@@ -1,4 +1,4 @@
-<span class="subheader-one">Comments (<?php echo get_comments_number(); ?>)</span>
+<!-- <span class="">Comments (<?php echo get_comments_number(); ?>)</span> -->
 <?php
 
 $args = array(

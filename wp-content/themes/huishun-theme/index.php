@@ -68,23 +68,6 @@
     </div>
     </div>
 
-    <div class="subscribe">
-        <div class="subscribe-outer">
-                <h2 class="section-header">JOIN ME ON THIS JOURNEY!</h2>
-                <form
-                    id="subscribe-form">
-                                        
-                        <input class="default-input" type="text" placeholder="Name" value="" name="FNAME">
-                        <input class="default-input" type="email" placeholder="Email" value="" name="EMAIL">
-                        <input class="default-button" type="submit" value="Subscribe" name="subscribe">
-
-                </form>
-
-                <div id="subscribe-result" class="subscribe-result"></div> 
-        </div>
-    </div> 
-
-
     <div class="timeline-section">
         <div class="section-container">
                 <h2 class="section-header">NEWEST POSTS</h2>
@@ -107,9 +90,20 @@
         </div>
     </div>
 
-    
+    <div class="subscribe">
+        <div class="subscribe-outer">
+                <h2 class="section-header">JOIN ME ON THIS JOURNEY!</h2>
+                <form
+                    id="subscribe-form">
+                                        
+                        <input class="default-input" type="text" placeholder="Name" value="" name="FNAME">
+                        <input class="default-input" type="email" placeholder="Email" value="" name="EMAIL">
+                        <input class="default-button" type="submit" value="Subscribe" name="subscribe">
 
+                </form>
 
-
+                <div id="subscribe-result" class="subscribe-result"></div> 
+        </div>
+    </div> 
 
 <?php get_footer() ?>
