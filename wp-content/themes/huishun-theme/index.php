@@ -37,6 +37,8 @@
         </div>
         <div class="scroll-down-container-outer">
             <a class="link" href="<? get_page_link(get_page_by_title('All posts')) ?>">More Posts</a>
+            <? var_dump(get_page_link(get_page_by_title('All posts'))) ?> <br> test
+            <? var_dump(get_page_by_title('All posts')) ?>
         </div>
         <!-- then the pagination links -->
         <!-- <div class="pagination">
