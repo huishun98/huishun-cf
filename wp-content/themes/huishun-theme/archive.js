@@ -1,10 +1,11 @@
 $(document).ready(() => {
+        console.log('runnn')
         //Archive
         var newestFirst = true;
         if (reverse[0] == 1) {
             newestFirst = false;
         }
-        $('#toggle-order').click(() => {
+        $('.toggle-order').click(() => {
             console.log('please toggle')
 
             //button words
