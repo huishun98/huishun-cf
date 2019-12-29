@@ -23,7 +23,7 @@
 
     <div class="timeline-section">
         <div class="section-container">
-                <h2 class="section-header">NEWEST POSTS</h2>
+                <h2 class="section-header">Newest posts</h2>
                 <div class="newest-posts-inner">
                     <?php
                     $default_posts_per_page = get_option( 'posts_per_page' );
