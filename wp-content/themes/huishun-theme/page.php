@@ -8,7 +8,7 @@ while(have_posts()) {
         <div class="page-thumbnail-wrapper">
                 <div class="page-thumbnail">
                     <div class="thumbnail-content">
-                        <span class="thumbnail-header"><?php the_title() ?></span>
+                        <span class="section-header"><?php the_title() ?></span>
                         <div class="thumbnail-description rich-text">
                             <p>
                                 <?php the_content() ?>

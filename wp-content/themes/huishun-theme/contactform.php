@@ -47,7 +47,7 @@ Template Name: Contact Form
         <div class="page-thumbnail-wrapper">
                 <div class="page-thumbnail">
                     <div class="thumbnail-content">
-                        <span class="thumbnail-header">Let's get in touch</span>
+                        <span class="section-header">Let's get in touch</span>
                         <div class="thumbnail-description rich-text">
                             <p class="page-subheader">To enquire or explore potential collaborations, please fill in the form below.</p>
                             <div class="contactform-result"><?= $result; ?></div>

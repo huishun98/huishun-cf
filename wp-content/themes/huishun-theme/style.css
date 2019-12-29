@@ -411,7 +411,7 @@ a {
     padding: 25px 70px;
     width: 100%;
 }
-.thumbnail-header {
+/* .thumbnail-header {
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -419,7 +419,7 @@ a {
     text-align: center;
     display: block;
     padding-bottom: 20px;
-}
+} */
 .page-subheader {
     text-align: center;
     margin-top: 20px;
@@ -452,9 +452,9 @@ a {
     .thumbnail-description {
         text-align: center;
     }
-    .thumbnail-header {
+    /* .thumbnail-header {
         line-height: 2;
-    }
+    } */
 }
 
 /* big logo */
@@ -522,6 +522,7 @@ a {
     font-weight: bold;
     color: black;
     letter-spacing: 1px;
+    padding-bottom: 10px;
 }
 .single-description {
     font-family: Montserrat;
