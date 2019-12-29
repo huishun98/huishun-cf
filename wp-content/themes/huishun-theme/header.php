@@ -60,7 +60,7 @@
                     </a>
                 </div>
                 <div class="mobile-navi-item">
-                    <a class="d-inline-block d-lg-none mobile-navi-trigger" target="#mobile-navi-main" href="javascript:void(0)">
+                    <a class="d-inline-block d-lg-none mobile-navi-trigger" target="#mobile-navi-main" href="javascript:void(0)" onclick="return false">
                             <div class="hamburger">
                                 <span class="hamburger-line line-one"></span>
                                 <span class="hamburger-line line-two"></span>

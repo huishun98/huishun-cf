@@ -5,7 +5,7 @@
                 <span class="hs">HS</span>
                 <span class="logo-description">Code Factory</span>
             </div>
-            <span class="banner-description"><?php bloginfo('description') ?></span>
+            <!-- <span class="banner-description"><?php bloginfo('description') ?></span> -->
             <!-- <div class="scroll-down-container-outer">
                 <div class="scroll-down-container">
                     <a class="link scroll-down" href="javascript:void(0)">View Posts 
