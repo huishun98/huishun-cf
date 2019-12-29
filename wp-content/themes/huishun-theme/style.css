@@ -316,7 +316,7 @@ a {
 .link {
     font-size: 14px;
     font-weight: 600;
-    letter-spacing: 2.8px;
+    letter-spacing: 0.5px;
     color: #8bc1ff;
     text-align: center;
     display: block;
@@ -470,7 +470,9 @@ a {
     display: block;
     margin:auto;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: 
 }
 .newest-posts-outer {
     height: 300px;
