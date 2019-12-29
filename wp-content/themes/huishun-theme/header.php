@@ -39,17 +39,17 @@
             </div>
         </div>
 
-        <div class="archive-dropdown">
+        <!-- <div class="archive-dropdown">
             <div class="">
-				<span class="archive-sidebar-title">Categories</span>
+				<span class="archive-sidebar-title">Categories</span> -->
 				<?php 
-					$categories = get_categories();
-					foreach($categories as $category) {
-					   	echo '<div class="sidebar-item"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>' ;
-					}
+					// $categories = get_categories();
+					// foreach($categories as $category) {
+					//    	echo '<div class="sidebar-item"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>' ;
+					// }
 				?>
-				</div>
-        </div>
+				<!-- </div>
+        </div> -->
 
         <div class="mobile-navi d-flex d-lg-none">
         <div class="mobile-navi-container">

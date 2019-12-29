@@ -1,37 +1,37 @@
 jQuery(document).ready(function ($) {
 
     //dropdown
-    const archiveDropdownActive = () => {
-        document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "10";
-        $('.archive-dropdown').addClass('active');
-    };
-    const archiveDropdownInactive = () => {
-        $('.archive-dropdown').removeClass('active');
-        document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "-1";
-    }
+    // const archiveDropdownActive = () => {
+    //     document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "10";
+    //     $('.archive-dropdown').addClass('active');
+    // };
+    // const archiveDropdownInactive = () => {
+    //     $('.archive-dropdown').removeClass('active');
+    //     document.getElementsByClassName("archive-dropdown")[0].style.zIndex = "-1";
+    // }
 
-    let archiveObj;
+    // let archiveObj;
 
-    $('.fixed-header .header-label').each((index, obj) => {
-        // following line is problematic
-        if ($(obj).html() == 'All posts') {
-            archiveObj = $(obj).parent();
-        }
-    });
+    // $('.fixed-header .header-label').each((index, obj) => {
+    //     // following line is problematic
+    //     if ($(obj).html() == 'All posts') {
+    //         archiveObj = $(obj).parent();
+    //     }
+    // });
 
-    if (archiveObj) {
-        archiveObj.hover(() => {
-            archiveDropdownActive();
-        }, () => {
-            archiveDropdownInactive();
-        })
-    }
+    // if (archiveObj) {
+    //     archiveObj.hover(() => {
+    //         archiveDropdownActive();
+    //     }, () => {
+    //         archiveDropdownInactive();
+    //     })
+    // }
 
-    $('.archive-dropdown').hover(() => {
-        archiveDropdownActive();
-    }, () => {
-        archiveDropdownInactive();
-    })
+    // $('.archive-dropdown').hover(() => {
+    //     archiveDropdownActive();
+    // }, () => {
+    //     archiveDropdownInactive();
+    // })
 
     //recent posts
     // var recentPosts = () => {

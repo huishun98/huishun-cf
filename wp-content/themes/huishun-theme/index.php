@@ -1,10 +1,10 @@
 <?php get_header() ?>  
     <div class="banner-wrapper">
         <div class="section-container">
-            <div class="logo bigger">
+            <!-- <div class="logo bigger">
                 <span class="hs">HS</span>
                 <span class="logo-description">Code Factory</span>
-            </div>
+            </div> -->
             <!-- <span class="banner-description"><?php bloginfo('description') ?></span> -->
             <!-- <div class="scroll-down-container-outer">
                 <div class="scroll-down-container">
