@@ -254,7 +254,7 @@ a {
     font-size: 16px;
     font-weight: 300;
     line-height: 1.5;
-    letter-spacing: 1.6px;
+    letter-spacing: 0.5px;
     padding-bottom: 10px;
     text-align: right;
 }
@@ -397,7 +397,7 @@ a {
 }
 .page-thumbnail {
     width: 100%;
-    max-width: 900px;
+    max-width: 700px;
     border-radius: 4px;
     background-color: #ffffff;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -412,7 +412,7 @@ a {
     width: 100%;
 }
 .thumbnail-header {
-    font-size: 16px;
+    font-size: 30px;
     font-weight: bold;
     letter-spacing: 2px;
     color: #494949;
@@ -516,7 +516,7 @@ a {
 .single-title {
     font-family: Montserrat;
     padding-top: 30px;
-    font-size: 64px;
+    font-size: 50px;
     font-weight: bold;
     color: black;
     letter-spacing: 1px;
@@ -1083,7 +1083,7 @@ ul.archive-sidebar {
     font-size: 1rem;
     padding-bottom: 10px;
     display: block;
-    letter-spacing: 2px;
+    letter-spacing: 0.5px;
     padding-right: 50px;
 }
 @media only screen and (max-width: 992px) {
