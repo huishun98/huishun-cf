@@ -285,7 +285,7 @@ a {
 .timeline-content-title {
     font-size: 19px;
     font-weight: 600;
-    letter-spacing: 4px;
+    letter-spacing: 0.5px;
     padding-bottom: 10px;
     display: block;
     color: #494949;
@@ -353,7 +353,6 @@ a {
     }
     .timeline-content-title {
         font-size: 18px;
-        letter-spacing: 2px;
         pointer-events: unset;
     }
 }
@@ -417,7 +416,7 @@ a {
 .thumbnail-header {
     font-size: 16px;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     color: #494949;
     text-align: center;
     display: block;
@@ -473,7 +472,7 @@ a {
     display: block;
     margin:auto;
     text-align: center;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 .newest-posts-outer {
     height: 300px;
@@ -514,7 +513,6 @@ a {
     font-size: 1rem;
     font-weight: 300;
     color: #49494979;
-    /* letter-spacing: 1px; */
     padding-top: 30px;
 }
 .single-title {
@@ -522,7 +520,6 @@ a {
     padding-top: 30px;
     font-size: 64px;
     font-weight: bold;
-    letter-spacing: 6px;
     color: black;
 }
 .single-description {
@@ -537,7 +534,7 @@ a {
     font-size: 19px;
     line-height: 30px;
     font-weight: 300;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
 }
 /* .single-body p {
     padding-bottom: 10px;
@@ -729,7 +726,7 @@ a {
     border-radius: 10px;
     border: none !important;
     font-size: 13px;
-    letter-spacing: 2.8px;
+    letter-spacing: 1px;
     padding: 10px 25px;
     text-align: center;
     transition: all 0.2s;
@@ -754,7 +751,7 @@ a {
     background-color: transparent;
     font-family: Mukta;
     font-size: 16px;
-    letter-spacing: 1.6px;
+    letter-spacing: 0.5px;
     color: white;
     height: 40px;
     border: none !important;
@@ -782,7 +779,7 @@ a {
     font-family: Mukta;
     font-size: 18px;
     line-height: 1.5;
-    letter-spacing: 0.7px;
+    letter-spacing: 0.5px;
     font-weight: 300;
 }
 @media only screen and (max-width: 768px) {
@@ -802,7 +799,7 @@ a {
     background-color: transparent;
     font-family: Mukta;
     font-size: 16px;
-    letter-spacing: 1.6px;
+    letter-spacing: 1px;
     color: #494949;
     height: 40px;
     border: none !important;
@@ -821,7 +818,7 @@ a {
     background-color: transparent;
     font-family: Mukta;
     font-size: 16px;
-    letter-spacing: 1.6px;
+    letter-spacing: 1px;
     color: #494949;
     height: 100px;
     border: none !important;
@@ -865,7 +862,7 @@ a {
     background-color: transparent;
     font-family: Mukta;
     font-size: 16px;
-    letter-spacing: 1.6px;
+    letter-spacing: 0.5px;
     color: #494949;
     height: 40px;
     border: none !important;
@@ -883,7 +880,7 @@ a {
     background-color: transparent;
     font-family: Mukta;
     font-size: 16px;
-    letter-spacing: 1.6px;
+    letter-spacing: 0.5px;
     color: #494949;
     height: 100px;
     border: none !important;
@@ -1190,7 +1187,7 @@ ul.archive-sidebar {
     align-items: center;
     color: white;
     font-weight: 500;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 .pastel-peach {
     background-color: #e2c79b;
