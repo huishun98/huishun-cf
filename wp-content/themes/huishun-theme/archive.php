@@ -4,30 +4,38 @@ Template Name: Archive
 
 <?php get_header() ?>
 
-<select class="d-block d-lg-none" onChange="window.location.href=this.value">
-	<option value="" selected disabled hidden>Select car:</option>
-	<?php
-	$categories = get_categories();
-	foreach ($categories as $category) {
-		$catcount_args = array(
-			'cat' => $category->term_id,
-		);
-		$the_query = new WP_Query($catcount_args);
-		$catcount = $the_query->found_posts;
-		echo '<option value="' . get_category_link($category->term_id) . '">' . $category->name . '</option>';
-	}
-	?>
-</select>
-
 <div class="timeline-section">
 	<div class="section-container">
 		<? if (have_posts()) {
 			the_archive_title('<h2 class="section-header">', '</h2>');
+			$queried_object = get_queried_object();
 		} ?>
+		<select class="d-block d-lg-none category-dropdown" onChange="window.location.href=this.value">
+
+			<?php
+			$categories = get_categories();
+			if ($queried_object->post_title == 'All posts') {
+				echo '<option value="' . get_page_link(get_page_by_title('All posts')) . '" selected>All posts</option>';
+			} else {
+				echo '<option value="' . get_page_link(get_page_by_title('All posts')) . '">All posts</option>';
+			}
+			foreach ($categories as $category) {
+				$catcount_args = array(
+					'cat' => $category->term_id,
+				);
+				$the_query = new WP_Query($catcount_args);
+				$catcount = $the_query->found_posts;
+
+				if ($queried_object->post_title == $category->name) {
+					echo '<option value="' . get_category_link($category->term_id) . '" selected>' . $category->name . '</option>';
+				} else {
+					echo '<option value="' . get_category_link($category->term_id) . '">' . $category->name . '</option>';
+				}
+			}
+			?>
+		</select>
 		<div class="newest-posts-inner">
 			<?php
-
-			$queried_object = get_queried_object();
 			if ($queried_object->post_title === 'All posts') { ?>
 				<div class="row">
 					<ul class="d-none d-lg-block col-lg-2 archive-sidebar">

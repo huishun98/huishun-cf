@@ -1229,13 +1229,17 @@ ul.archive-sidebar {
     padding-right: 50px;
 }
 
+.category-dropdown {
+    font-family: Mukta;
+    margin-left: auto;
+    margin-right: 20px;
+    margin: 10px 20px 10px auto;
+}
+
 @media only screen and (max-width: 992px) {
     .toggle-order {
         padding-right: unset;
         text-align: center;
-    }
-    .toggle-order-container {
-        padding: 0;
     }
 }
 
