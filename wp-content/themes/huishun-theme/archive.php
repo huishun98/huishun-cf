@@ -3,6 +3,22 @@ Template Name: Archive
 */ ?>
 
 <?php get_header() ?>
+
+<select class="d-block d-lg-none" onChange="window.location.href=this.value">
+	<option value="" selected disabled hidden>Select car:</option>
+	<?php
+	$categories = get_categories();
+	foreach ($categories as $category) {
+		$catcount_args = array(
+			'cat' => $category->term_id,
+		);
+		$the_query = new WP_Query($catcount_args);
+		$catcount = $the_query->found_posts;
+		echo '<option value="' . get_category_link($category->term_id) . '">' . $category->name . '</option>';
+	}
+	?>
+</select>
+
 <div class="timeline-section">
 	<div class="section-container">
 		<? if (have_posts()) {

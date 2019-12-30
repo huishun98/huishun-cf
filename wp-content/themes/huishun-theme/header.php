@@ -30,16 +30,14 @@
                     );
                     $pages = new WP_Query($args);
                     $pages->posts = array_reverse($pages->posts);
-                    ?>
-
-                    <?php while ($pages->have_posts()) {
+                    while ($pages->have_posts()) {
                         $pages->the_post(); ?>
                         <div class="fixed-header-item-wrapper">
                             <a href="<?php echo the_permalink() ?>" class="header-label"><?php the_title() ?></a>
                         </div>
-                    <?php } ?>
+                    <? } ?>
 
-                    <?php wp_reset_query(); ?>
+                    <? wp_reset_query(); ?>
                 </div>
             </div>
         </div>

@@ -1129,7 +1129,7 @@ cite.fn {
     padding-bottom: 10px;
 }
 
-.logged-in-as, .comment-notes {
+.logged-in-as, .comment-notes, .comment-form-cookies-consent {
     font-family: Mukta;
     font-weight: 300;
 }
