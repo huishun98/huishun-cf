@@ -7,8 +7,12 @@ Template Name: Archive
 <div class="timeline-section">
 	<div class="section-container">
 		<? if (have_posts()) {
-			the_archive_title('<h2 class="section-header">', '</h2>');
 			$queried_object = get_queried_object();
+			if ($queried_object->post_title == 'All posts') {
+				echo '<h2 class="section-header">All posts</h2>';
+			} else {
+				echo '<h2 class="section-header">' . $queried_object->name . '</h2>';
+			}
 		} ?>
 		<select class="d-block d-lg-none category-dropdown" onChange="window.location.href=this.value">
 
