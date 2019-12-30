@@ -1236,6 +1236,10 @@ ul.archive-sidebar {
     margin: 10px 20px 30px auto;
 }
 
+.category-dropdown-option {
+    text-transform: capitalize;
+}
+
 @media only screen and (max-width: 992px) {
     .toggle-order {
         padding-right: unset;

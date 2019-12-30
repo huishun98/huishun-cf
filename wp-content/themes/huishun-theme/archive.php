@@ -19,9 +19,9 @@ Template Name: Archive
 			<?php
 			$categories = get_categories();
 			if ($queried_object->post_title == 'All posts') {
-				echo '<option value="' . get_page_link(get_page_by_title('All posts')) . '" selected>all posts</option>';
+				echo '<option class="category-dropdown-option" value="' . get_page_link(get_page_by_title('All posts')) . '" selected>all posts</option>';
 			} else {
-				echo '<option value="' . get_page_link(get_page_by_title('All posts')) . '">all posts</option>';
+				echo '<option class="category-dropdown-option" value="' . get_page_link(get_page_by_title('All posts')) . '">all posts</option>';
 			}
 			foreach ($categories as $category) {
 				$catcount_args = array(
@@ -31,9 +31,9 @@ Template Name: Archive
 				$catcount = $the_query->found_posts;
 
 				if ($queried_object->name == $category->name) {
-					echo '<option value="' . get_category_link($category->term_id) . '" selected>' . $category->name . '</option>';
+					echo '<option class="category-dropdown-option" value="' . get_category_link($category->term_id) . '" selected>' . $category->name . '</option>';
 				} else {
-					echo '<option value="' . get_category_link($category->term_id) . '">' . $category->name . '</option>';
+					echo '<option class="category-dropdown-option" value="' . get_category_link($category->term_id) . '">' . $category->name . '</option>';
 				}
 			}
 			?>
