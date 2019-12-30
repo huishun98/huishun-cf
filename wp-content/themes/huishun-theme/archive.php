@@ -15,9 +15,9 @@ Template Name: Archive
 			<?php
 			$categories = get_categories();
 			if ($queried_object->post_title == 'All posts') {
-				echo '<option value="' . get_page_link(get_page_by_title('All posts')) . '" selected>All posts</option>';
+				echo '<option value="' . get_page_link(get_page_by_title('All posts')) . '" selected>all posts</option>';
 			} else {
-				echo '<option value="' . get_page_link(get_page_by_title('All posts')) . '">All posts</option>';
+				echo '<option value="' . get_page_link(get_page_by_title('All posts')) . '">all posts</option>';
 			}
 			foreach ($categories as $category) {
 				$catcount_args = array(
