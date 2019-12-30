@@ -26,7 +26,7 @@ Template Name: Archive
 				$the_query = new WP_Query($catcount_args);
 				$catcount = $the_query->found_posts;
 
-				if ($queried_object->post_title == $category->name) {
+				if ($queried_object->name == $category->name) {
 					echo '<option value="' . get_category_link($category->term_id) . '" selected>' . $category->name . '</option>';
 				} else {
 					echo '<option value="' . get_category_link($category->term_id) . '">' . $category->name . '</option>';
